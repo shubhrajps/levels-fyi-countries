@@ -51,7 +51,7 @@ const CountryExplorer: React.FC = () => {
               <Skeleton key={index} />
             ))
           ) : (
-            filteredCountries.map((country, index) => (
+            filteredCountries.map((country) => (
               <CountryCard key={country.name.common} country={country} />
             ))
           )}

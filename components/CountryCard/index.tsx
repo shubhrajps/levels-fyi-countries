@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Country } from '../../utils/types';
 import './CountryCard.css';
+import Image from 'next/image';
 
 interface CountryCardProps {
   country: Country;
@@ -21,7 +22,14 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
     <div data-testid="country" className={`country-card ${flipped ? 'flipped' : ''}`} onClick={handleCardClick}>
       <div className="card-inner">
         <div className="card-front bg-white rounded-lg shadow-md p-4">
-          <img src={country.flags.svg} alt={`${country.name.common} flag`} loading='lazy' className="w-full h-48 object-cover rounded-t-lg" />
+          <Image
+            src={country.flags.svg} 
+            alt={`${country.name.common} flag`} 
+            loading="lazy" 
+            width={500} // Specify width
+            height={300} // Specify height
+            className="w-full h-48 object-cover rounded-t-lg" 
+          />
           <h2 className="text-xl text-black font-bold mt-4 overflow-hidden whitespace-nowrap text-ellipsis" data-testid="country-name">{country.name.common}</h2>
           <p className="text-gray-600"><span className="font-bold">Capital:</span> {country.capital?.[0]}</p>
           <p className="text-gray-600"><span className="font-bold">Population:</span> {country.population.toLocaleString()}</p>
