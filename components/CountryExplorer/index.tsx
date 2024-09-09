@@ -29,7 +29,7 @@ const CountryExplorer: React.FC = () => {
 
   useEffect(() => {
     const filtered = countries.filter(country =>
-      country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
+      country.name.common.toLowerCase().startsWith(searchTerm.toLowerCase())
     );
     setFilteredCountries(filtered);
   }, [searchTerm, countries]);
