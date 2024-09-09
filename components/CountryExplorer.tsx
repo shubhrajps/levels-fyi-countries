@@ -31,7 +31,7 @@ const CountryExplorer: React.FC = () => {
 
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-8">Country Explorer</h1>
+      <h1 className="text-3xl font-bold mb-8">Countries.fyi</h1>
       <input
         type="text"
         placeholder="Search for a country..."
