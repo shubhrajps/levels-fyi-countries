@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CountryCard from './CountryCard';
-import Skeleton from './Skeleton';
-import { Country } from '../utils/types';
+import CountryCard from '../CountryCard';
+import Skeleton from '../Skeleton';
+import { Country } from '../../utils/types';
 
 const CountryExplorer: React.FC = () => {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -52,7 +52,7 @@ const CountryExplorer: React.FC = () => {
             ))
           ) : (
             filteredCountries.map((country, index) => (
-              <CountryCard key={index} country={country} />
+              <CountryCard key={country.name.common} country={country} />
             ))
           )}
         </div>
