@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Countries Project
+
+The Countries Project is a Next.js application that allows users to explore information about various countries around the world. It features a user-friendly interface for browsing country details, including flags, capitals, populations, and more.
+
+## Features
+
+- Display a grid of countries with their flags and basic information
+- Allow users to click on a country to view detailed information
+- Support for searching countries by name
+- Responsive design that adapts to different screen sizes
+- API route for fetching country data from a REST API
+- Lazy loading of images for improved performance
+- Skeleton loading screens while data is being fetched
+- Unit tests for components using Jest and React Testing Library
+- CI/CD pipeline for automated testing and deployment
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/countries-project.git
+
+
+2. Navigate to the project directory:
+
+```bash
+cd countries-project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Install the dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Run the tests
+```bash
+npm test
+```
 
-## Learn More
+### Assumptions
+1. **Availability of Country Data:** 
+The project assumes that the country data will be available and accessible from the API endpoint without any downtime. It is expected that the data source for countries will remain stable and that there will be no significant changes to the API structure.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Performance Expectations:**
+The project assumes that users will have a reliable internet connection when accessing the application. The performance of the country loading and transitions is optimized for average network conditions, but users on slower connections may experience delays.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Built With
+- **Next.js** - React framework for building server-rendered applications
+- **React** - JavaScript library for building user interfaces
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **Jest** - JavaScript testing framework
+- **React Testing Library** - Library for testing React components
